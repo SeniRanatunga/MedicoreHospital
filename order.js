@@ -34,7 +34,6 @@ function renderMedicines(categories) {
   });
 }
 
-
 function handleAddToCart(medicineItem, medicine) {
   const itemName = medicineItem.querySelector("h3").innerText;
   const quantityInput = medicineItem.querySelector("input[type='number']");
@@ -76,34 +75,50 @@ function updateTotal() {
   totalCell.innerText = `LKR ${total.toFixed(2)}`;
 }
 
+// Add items in the cart to favourites
 document.getElementById("add-to-favourites").addEventListener("click", () => {
-  const cartItems = Array.from(cartTableBody.rows).map(row => row.cells[0].innerText); // Get item names from the cart
+  const cartItems = Array.from(cartTableBody.rows).map(row => {
+    return {
+      name: row.cells[0].innerText,
+      quantity: parseInt(row.cells[1].innerText),
+      price: parseFloat(row.cells[2].innerText) / parseInt(row.cells[1].innerText) // Save price per unit
+    };
+  });
+
   if (cartItems.length > 0) {
-    favourites.push(cartItems);// Save to favourites
+    favourites.push(cartItems); // Save both name and quantity to favourites
     alert("Items added to favourites.");
   } else {
     alert("Your cart is empty.");
   }
 });
 
+// Apply favourite items to the cart
 document.getElementById("apply-favourite").addEventListener("click", () => {
   if (favourites.length > 0) {
-    const lastFavourites = favourites[favourites.length - 1];
-    lastFavourites.forEach(itemName => {
+    const lastFavourites = favourites[favourites.length - 1]; // Get the most recent favourite list
+    lastFavourites.forEach(item => {
+      const itemName = item.name;
+      const quantity = item.quantity;
+      const price = item.price; // Fetch the price per unit from the favourites list
+
       const medicineItem = Array.from(medicineContainer.getElementsByClassName("medicine-item")).find(item => item.querySelector("h3").innerText === itemName);
-      const quantityInput = medicineItem.querySelector("input[type='number']");
-      quantityInput.value = 1;
-      handleAddToCart(medicineItem, {
-        name: itemName,
-        price: parseFloat(medicineItem.querySelector("p").innerText.split(" ")[1]),
-        currency: 'LKR'
-      });
+      if (medicineItem) {
+        const quantityInput = medicineItem.querySelector("input[type='number']");
+        quantityInput.value = quantity; // Set the correct quantity from favourites
+        handleAddToCart(medicineItem, {
+          name: itemName,
+          price: price, // Use the price saved in favourites
+          currency: 'LKR'
+        });
+      }
     });
   } else {
     alert("No favourite items available.");
   }
 });
 
+// Proceed to checkout and store the cart in localStorage
 document.getElementById("buy-now-button").addEventListener("click", () => {
   const cartItems = Array.from(cartTableBody.rows).map(row => ({
     name: row.cells[0].innerText,
