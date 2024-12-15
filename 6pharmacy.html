@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hospital website providing healthcare services, doctor channeling, and pharmacy.">
+    <meta name="keywords" content="hospital, healthcare, doctor, channeling, pharmacy, services">
+    <title>Hospital Website version 2</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>   
+<body class="body_forms">
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/1logo.png" alt="MediCore">
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+    <div id="nav-section">
+        <nav class="nav-bar">
+          <ul class="nav-tabs">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="2aboutus.html">About Us</a></li>
+            <li><a href="3services.html">Services</a></li>
+            <li><a href="4doctors.html">Doctors</a></li>
+            <li><a href="5consulting.html">Consulting</a></li>
+            <li><a href="order.html">Pharmacy</a></li>
+            <li><a href="7careers.html">Careers</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <h1 class="headings">Order your medicine here!</h1>
+
+    <form class="form">
+        <div class="form-group">
+            <label for="medicine">Medicine:</label>
+            <select id="medicine" name="medicine">
+                <option value="paracetamol">Paracetamol</option>
+                <option value="amoxicillin">Amoxicillin</option>
+                <option value="ibuprofen">Ibuprofen</option>
+                <option value="metformin">Metformin</option>
+                <option value="losartan">Losartan</option>
+                <option value="omeprazole">Omeprazole</option>
+                <option value="atorvastatin">Atorvastatin</option>
+                <option value="cetirizine">Cetirizine</option>
+                <option value="azithromycin">Azithromycin</option>
+                <option value="salbutamol">Salbutamol</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="dose">Quantity / Dose:</label>
+            <select id="dose" name="dose">
+                <option value="1tablet">1 Tablet</option>
+                <option value="2tablets">2 Tablets</option>
+                <option value="1capsule">1 Capsule</option>
+                <option value="2capsules">2 Capsules</option>
+                <option value="1syrup">5 ml Syrup</option>
+                <option value="2syrups">10 ml Syrup</option>
+                <option value="1injection">1 Injection</option>
+                <option value="2injections">2 Injections</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contact">Contact number:</label>
+            <input type="text" id="contact" name="contact" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+
+        <div class="form-group">
+            <label for="notes">Additional notes:</label>
+            <textarea id="notes" name="notes"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Payment method:</label>
+            <input type="radio" id="credit" name="payment" value="credit">
+            <label for="credit">Credit Card</label>
+            <input type="radio" id="paypal" name="payment" value="paypal">
+            <label for="paypal">PayPal</label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <footer>
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <p>Phone number: 0338977431<br>Email: medicore@gmail.com</p>
+        </div>
+        <div class="social-links">
+            <a href="https://instagram.com/">Instagram</a>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://www.youtube.com/">YouTube</a>
+            <a href="https://linkedin.com/">LinkedIn</a>
+        </div>
+        <p>&copy; MediCore. All rights reserved.</p>
+    </footer>
+</body>
+</html>

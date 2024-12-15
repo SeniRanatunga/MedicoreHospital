@@ -1,0 +1,732 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 2cm;
+    background-color: rgb(74, 152, 224);
+}
+
+.logo img {
+    width: 125px; /*To make the logo smaller */
+    height: 65px; /* Maintain aspect ratio */
+    position: absolute; /* Position the logo within the header */
+    top: 8px;
+    left: 5px; 
+    bottom: 5px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border-radius: 5px; /* Rounded corners*/
+    border: 1px solid #ccc
+}
+
+
+#nav-section{
+    background-color: rgb(74, 152, 224);
+    
+}
+
+.nav-tabs {
+    
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;  /* Rounded corners */
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+
+
+    
+  }
+
+  .nav-tabs a {
+    color: black;
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px;
+    display: block;
+    border-radius: 10px;
+    background-color: lightblue;
+    padding-block-end: 10px;
+}
+
+
+.nav a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive design for navigation tabs on larger screens */
+@media (min-width: 680px) {
+    .nav-tabs {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+}
+
+
+.nav a:hover {
+    background-color: #f0f0f0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    border-style: solid;
+    border-width: 5px;
+    border-color:rgb(74, 152, 224) ;
+    
+
+}
+
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(74, 152, 224);
+    border-style: solid;
+}
+
+footer p, footer a {
+    margin: 10px 0;
+    display: block; /* Make footer items block-level */
+}
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .contact-info, .social-links {
+        flex: 1;
+        margin: 0 20px; /* Add horizontal margin */
+    }
+
+    .social-links a {
+        display: inline-block; /* Make links inline-block */
+        margin-right: 10px;
+    }
+}
+ 
+
+
+
+
+
+/*home only*/
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+}
+
+/* Text overlay for the hero section */
+.hero-text {
+  
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Adjusts the positioning to be truly centered */
+    text-align: center;
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.hero-text h1 {
+    font-size: 48px; 
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 24px; 
+    margin: 10px 0;
+}
+
+.home_content{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* Flexbox layout for paragraphs in the home page */
+.para{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Media query for larger screens */
+@media (min-width: 680px) {
+    .para{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+#img{
+    margin: 0 10px;
+    max-width: 45%;
+}
+
+
+
+
+
+
+/*aboutus*/
+
+#branch_topic{
+    text-align:center;
+}
+
+.summary h3{
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: left;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+/* For smaller screens */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 15px; /* Adds spacing between rows */
+        
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+ 
+     /* Adds labels to table cells for small screens */
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    th {
+        display: none; /* Hide the header in small screens */
+    }
+}
+
+/* For larger screens */
+@media (min-width: 1024px) {
+    table {
+        font-size: 1.2em;
+    }
+
+    th, td {
+        padding: 16px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  section.branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+  }
+  
+  section.branch h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  section.branch p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  section.branch img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  
+  section.branch iframe {
+    width: 300px;
+    height: 200px;
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  @media (min-width: 680px) {
+    section.branch {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    section.branch .a, 
+    section.branch .b, 
+    section.branch .c {
+      flex: 1;
+      padding: 10px;
+    }
+  
+    section.branch p {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  
+    section.branch img,
+    section.branch iframe {
+      width: 300px;
+      height: 200px;
+    }
+  }
+  
+/**/
+/*about page*/
+
+.branch {
+    margin: 20px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content img, 
+.content iframe {
+    margin: 10px 0;
+    max-width: 100%;
+}
+
+/* Media query for larger screens (min-width: 680px) */
+@media (min-width: 680px) {
+    .content {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .content img, 
+    .content iframe {
+        margin: 0 10px;
+        max-width: 45%;
+    }
+    
+    .content p {
+        max-width: 50%;
+        margin-right: 10px;
+    }
+
+    
+
+}
+
+/*table styling */
+table {
+    width: 100%; 
+    border-collapse: collapse; /* Collapses table borders into a single border */
+    margin: 20px 0; /* Space above and below the table */
+}
+
+
+caption {
+    font-size: 1.5em; 
+    margin-bottom: 10px; 
+    text-align: left; 
+}
+
+
+th, td {
+    border: 1px solid #ddd; 
+    padding: 8px; /* Space inside each cell */
+    text-align: left; 
+}
+
+
+th {
+    background-color: #f4f4f4; 
+    font-weight: bold; 
+}
+
+/* Alternate row colors for better readability */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray background for even rows */
+}
+
+
+tfoot {
+    background-color: #f4f4f4; 
+    font-weight: bold; 
+}
+
+/* Media query for larger screens (min-width: 680px) */
+@media (min-width: 680px) {
+    table {
+        width: 100%; 
+        margin: 20px auto; 
+     
+    }
+
+   
+    th, td {
+        padding: 12px; 
+    }
+
+   
+    caption {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+/*consulting page*/
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+form {
+    margin-top: 20px;
+    max-width: 600px; /* Limit the width */
+    margin: 0 auto; /* Center the form on the page */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+    
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #4cae4c;
+}
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+footer a {
+    margin: 5px;
+    padding: 10px;
+    display: inline-block;
+    background-color: #eee;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.form{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.services-body{
+    padding-left: 25px;
+    padding-right: 25px;
+} 
+
+
+
+/*services page flex box*/
+
+.services_page_section1 h3,
+.services_page_section1 p {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.register_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+/*styling for the image container */
+.image-box {
+    display: flex;                 
+    flex-direction: column;        
+    align-items: center;           
+    gap: 10px;                    
+}
+
+/*styling for images */
+.image-box img {
+    width: 100%;      /* Makes the images responsive */
+    max-width: 400px; /* Limits the maximum width of each image */
+    height: auto;     /* Maintains the image's aspect ratio */
+}
+
+/* Media query for larger screens (min-width: 680px) */
+@media (min-width: 680px) {
+    .image-box {
+        flex-direction: row;       
+        flex-wrap: wrap;           /* Allows images to wrap to the next line if there's not enough space */
+        justify-content: space-around; 
+    }
+
+    .image-box img {
+        max-width: 18%;            
+}
+
+}
+
+
+
+/*Doctors page*/
+
+
+.content h3,
+.content p {
+    text-align: center;          
+}
+
+/*styling for the grid container */
+.doctors_grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+/* Styling for each doctor card */
+.doctors_grid div {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling to make them responsive and circular */
+.doctors_grid img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Media query for larger screens (min-width: 680px) */
+@media (min-width: 680px) {
+    .doctors_grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+
+/*careers page grid*/
+
+.careers_content {
+    text-align: center; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+
+.careers_content p {
+    margin: 0 auto; 
+    max-width: 700px; 
+    line-height: 1.6; 
+}
+
+
+section {
+    margin: 20px 0;
+}
+
+/* Styles for the images in the first section */
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Styles for the grid container */
+.career_grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 10px;
+}
+
+/* Styles for the images inside the grid */
+.career_grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media query for larger screens */
+@media (min-width: 680px) {
+    .career_grid {
+        grid-template-columns: repeat(2, 1fr); 
+        
+    }
+}
+
+
+
+
+.body_forms{
+    
+        background-image: url('images/bg5.jpg'); 
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center;
+        background-repeat: no-repeat; /* Prevents repeating of the image */
+        background-attachment: fixed; 
+        font-family: Arial, sans-serif;
+        margin: 0; 
+        padding: 0; 
+        height: 100%; 
+    }
+    
+    
+    
+.headings{
+    text-align: center;
+    color: white;
+}
+
+
+/*Animation*/
+
+/* Container for the hero section */
+.hero {
+    position: relative;  
+    width: 100%;         
+    height: 400px;      
+    overflow: hidden;    
+}
+
+/* Styles for each image inside the hero container */
+.hero-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-images img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 30s infinite; /*fade animation for 30 seconds in an infinite loop */
+}
+
+/* individual animation delays for each image */
+.hero-images img:nth-child(1) { animation-delay: 0s; }
+.hero-images img:nth-child(2) { animation-delay: 5s; }
+.hero-images img:nth-child(3) { animation-delay: 10s; }
+.hero-images img:nth-child(4) { animation-delay: 15s; }
+.hero-images img:nth-child(5) { animation-delay: 20s; }
+.hero-images img:nth-child(6) { animation-delay: 25s; }
+
+/* Keyframes for the fade animation */
+@keyframes fade {
+    0% { opacity: 0; }
+    16.67% { opacity: 1; }
+    33.33% { opacity: 0; }
+}
+
+
+
+
+
+
+

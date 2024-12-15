@@ -1,0 +1,59 @@
+{
+  "categories": [
+    {
+      "name": "Analgesics",
+      "items": [
+        { "name": "Paracetamol", "price": 10.0, "currency": "LKR", "img": "medicine/1Paracetamol (3).webp" },
+        { "name": "Ibuprofen", "price": 8.0, "currency": "LKR", "img": "medicine/3ibuprofen (1).webp" },
+        { "name": "Aspirin", "price": 15.0, "currency": "LKR", "img": "medicine/2aspirin (2).webp" },
+        { "name": "Naproxen", "price": 20.0, "currency": "LKR", "img": "medicine/4Naproxen.webp" },
+        { "name": "Diclofenac", "price": 5.0, "currency": "LKR", "img": "medicine/5Diclofenac.webp" },
+        { "name": "Codeine", "price": 10.0, "currency": "LKR", "img": "medicine/6codeine.webp" }
+      ]
+    },
+    {
+      "name": "Antibiotics",
+      "items": [
+        { "name": "Amoxicillin", "price": 5.0, "currency": "LKR", "img": "medicine/7Amoxicillin.webp" },
+        { "name": "Ciprofloxacin", "price": 10.0, "currency": "LKR", "img": "medicine/8Ciprofloxacin.webp" },
+        { "name": "Azithromycin", "price": 15.0, "currency": "LKR", "img": "medicine/9Azithromycin.webp" },
+        { "name": "Doxycycline", "price": 20.0, "currency": "LKR", "img": "medicine/10Doxycycline.webp" },
+        { "name": "Clindamycin", "price": 16.0, "currency": "LKR", "img": "medicine/11Clindamycin.jpg" },
+        { "name": "Cephalexin", "price": 8.0, "currency": "LKR", "img": "medicine/12Cephalexin.jpg" }
+      ]
+    },
+    {
+      "name": "Antidepressants",
+      "items": [
+        { "name": "Fluoxetine", "price": 15.0, "currency": "LKR", "img": "medicine/13Fluoxetine.jpg" },
+        { "name": "Sertraline", "price": 10.0, "currency": "LKR", "img": "medicine/14Sertraline.webp" },
+        { "name": "Amitriptyline", "price": 5.0, "currency": "LKR", "img": "medicine/15Amitriptyline.webp" },
+        { "name": "Escitalopram", "price": 16.0, "currency": "LKR", "img": "medicine/16Escitalopram.webp" },
+        { "name": "Paroxetine", "price": 30.0, "currency": "LKR", "img": "medicine/17Paroxetine.jpg" },
+        { "name": "Venlafaxine", "price": 8.0, "currency": "LKR", "img": "medicine/18Venlafaxine.webp" }
+      ]
+    },
+    {
+      "name": "Antihistamines",
+      "items": [
+        { "name": "Diphenhydramine", "price": 8.0, "currency": "LKR", "img": "medicine/19Diphenhydramine.webp" },
+        { "name": "Loratadine", "price": 8.5, "currency": "LKR", "img": "medicine/20Loratadine.jpg" },
+        { "name": "Cetirizine", "price": 10.0, "currency": "LKR", "img": "medicine/21Cetirizine.jpg" },
+        { "name": "Fexofenadine", "price": 5.0, "currency": "LKR", "img": "medicine/22Fexofenadine.webp" },
+        { "name": "Chlorpheniramine", "price": 7.5, "currency": "LKR", "img": "medicine/23Chlorpheniramine.webp" },
+        { "name": "Levocetirizine", "price": 8.0, "currency": "LKR", "img": "medicine/24Levocetirizine.jpg" }
+      ]
+    },
+    {
+      "name": "Antihypertensives",
+      "items": [
+        { "name": "Lisinopril", "price": 12.0, "currency": "LKR", "img": "medicine/25Lisinopril.webp" },
+        { "name": "Amlodipine", "price": 12.5, "currency": "LKR", "img": "medicine/26Amlodipine.webp" },
+        { "name": "Losartan", "price": 13.0, "currency": "LKR", "img": "medicine/27Losartan.webp" },
+        { "name": "Metoprolol", "price": 15, "currency": "LKR", "img": "medicine/28Metoprolol.webp" },
+        { "name": "Atenolol", "price": 11.5, "currency": "LKR", "img": "medicine/29Atenolol.webp" },
+        { "name": "Hydrochlorothiazide", "price": 10.0, "currency": "LKR", "img": "medicine/30Hydrochlorothiazide.webp" }
+      ]
+    }
+  ]
+}

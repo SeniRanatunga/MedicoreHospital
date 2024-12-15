@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e0f7fa, #b3e5fc);
+    background-repeat: no-repeat;
+    background-image: url("medicine/bgorder.webp");
+    background-size: cover;
+    color: #333;
+}
+
+.order-page {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow wrapping of flex items */
+}
+
+.medicine-list {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap; /* Allow medicines to wrap */
+    gap: 20px;
+}
+
+.medicine-item {
+    background-color: rgb(80, 174, 206);
+    border: 1px ;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    width: calc(33.33% - 20px); /* 3 items per row for large screens */
+    box-sizing: border-box;
+}
+
+.medicine-item img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.medicine-item .buttons {
+    display: block;
+    margin: 5px auto;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: inline-block;
+    padding-top: 20px;
+    margin: 5px auto;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cart table styling */
+.cart {
+    flex: 1;
+    padding: 20px;
+    max-height: 80vh;
+    position: sticky;
+    top: 20px;
+    overflow-y: auto;
+    min-width: 300px; 
+    
+}
+
+.cart h2 {
+    margin-top: 0;
+}
+
+table {
+    background-color: lightblue;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+.buttons:hover {
+    background-color: #0056b3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 1.5cm;
+    background-color: rgb(74, 152, 224);
+}
+
+.logo img {
+    width: 125px;
+    height: 65px;
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    bottom: 5px;
+}
+
+
+/*nav section styling*/
+#nav-section {
+    background-color: rgb(74, 152, 224);
+}
+
+.nav-tabs {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.nav-tabs a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+
+.nav-tabs a:hover {
+    background-color: #f0f0f0;
+}
+
+@media (min-width: 680px) {
+    .nav-tabs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/*footer styling*/
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color:rgb(74, 152, 224);
+    border-style: solid;
+}
+
+footer p, footer a {
+    margin: 10px 0;
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .contact-info, .social-links {
+        flex: 1;
+        margin: 0 20px;
+    }
+
+    .social-links a {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+/* Media Query for small screens */
+@media (max-width: 767px) {
+    .medicine-item {
+        width: calc(50% - 20px); /* 2 items per row for small screens */
+    }
+
+    .order-page {
+        flex-direction: column;
+    }
+
+    .cart {
+        width: 100%;
+        position: relative;
+        max-height: none; /* Allow cart to grow naturally */
+    }
+
+    table {
+        margin-bottom: 20px; 
+    }
+}
+
+/* Media Query for extra small screens (phone) */
+@media (max-width: 480px) {
+    .medicine-item {
+        width: 100%; /* 1 item per row for very small screens */
+    }
+}

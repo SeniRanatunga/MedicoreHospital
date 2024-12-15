@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hospital website providing healthcare services, doctor channeling, and pharmacy.">
+    <meta name="keywords" content="hospital, healthcare, doctor, channeling, pharmacy, services">
+    <title>Hospital Website version 2</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="manifest" href="manifest.json">
+   
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body class="body_forms">
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/1logo.png" alt="MediCore">
+            </a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+   
+    
+    <div id="nav-section">
+        <nav class="nav-bar">
+          <ul class="nav-tabs">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="2aboutus.html">About Us</a></li>
+            <li><a href="3services.html">Services</a></li>
+            <li><a href="4doctors.html">Doctors</a></li>
+            <li><a href="5consulting.html">Consulting</a></li>
+            <li><a href="order.html">Pharmacy</a></li>
+            <li><a href="7careers.html">Careers</a></li>
+          </ul>
+        </nav>
+      </div>    
+    <h1 class="headings">Consult a doctor</h1>
+
+    <form class="form" action="/submit" method="POST">
+        <label for="full-name">Full name:</label>
+        <input type="text" id="full-name" name="full-name" required>
+
+        <label for="contact-number">Contact number:</label>
+        <input type="tel" id="contact-number" name="contact-number" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="doctor">Choose the doctor:</label>
+        <select id="doctor" name="doctor">
+            <option value="Dr. Randew Gunarathna">Dr. Randew Gunarathna</option>
+            <option value="Dr. Amani Mohotti">Dr. Amani Mohotti</option>
+            <option value="Dr. Kamal Weerawardana">Dr. Kamal Weerawardana</option>
+            <option value="Dr. Dimali Weerasooriya">Dr. Dimali Weerasooriya</option>
+            <option value="Dr. Ashen Ranasingha">Dr. Ashen Ranasingha</option>
+            <option value="Dr. Sandra Patel">Dr. Sandra Patel</option>
+            <option value="Dr. Dileep Ranawaka">Dr. Dileep Ranawaka</option>
+            <option value="Dr. Roshani Senevirathne">Dr. Roshani Senevirathne</option>
+            <option value="Dr. Adhil Sharma">Dr. Adhil Sharma</option>
+            <option value="Dr. Harshana de Silva">Dr. Harshana de Silva</option>
+        </select>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="month">Month:</label>
+        <select id="month" name="month">
+            <option value="jan">January</option>
+            <option value="feb">February</option>
+            <option value="mar">March</option>
+            <option value="apr">April</option>
+            <option value="may">May</option>
+            <option value="jun">June</option>
+            <option value="jul">July</option>
+            <option value="aug">August</option>
+            <option value="sep">September</option>
+            <option value="oct">October</option>
+            <option value="nov">November</option>
+            <option value="dec">December</option>
+        </select>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="note">Additional note:</label>
+        <textarea id="note" name="note" rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+ 
+    <footer>
+        <h3>Contact Us</h3>
+        <p>Phone number: 0338977431<br>Email: medicore@gmail.com</p>
+        <a href="https://instagram.com/">Instagram</a><br>
+        <a href="https://www.facebook.com/">Facebook</a><br>
+        <a href="https://www.youtube.com/">YouTube</a><br>
+        <a href="https://linkedin.com/">LinkedIn</a><br>
+        <p>&copy; MediCore. All rights reserved.</p>
+    </footer>
+</body>
+</html>
