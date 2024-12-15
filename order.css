@@ -7,6 +7,9 @@ body {
     background-image: url("medicine/bgorder.webp");
     background-size: cover;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .order-page {
@@ -14,6 +17,7 @@ body {
     gap: 20px;
     padding: 20px;
     flex-wrap: wrap; /* Allow wrapping of flex items */
+    flex: 1; /* Allow order-page to take up available space */
 }
 
 .medicine-list {
@@ -117,8 +121,7 @@ header {
     bottom: 5px;
 }
 
-
-/*nav section styling*/
+/* nav section styling */
 #nav-section {
     background-color: rgb(74, 152, 224);
 }
@@ -154,11 +157,11 @@ header {
     }
 }
 
-/*footer styling*/
+/* Footer styling */
 footer {
     padding: 20px;
     text-align: center;
-    background-color:rgb(74, 152, 224);
+    background-color: rgb(74, 152, 224);
     border-style: solid;
 }
 
@@ -200,6 +203,7 @@ footer p, footer a {
         width: 100%;
         position: relative;
         max-height: none; /* Allow cart to grow naturally */
+        margin-top: auto; /* Keep the cart at the bottom */
     }
 
     table {
@@ -207,9 +211,39 @@ footer p, footer a {
     }
 }
 
-/* Media Query for extra small screens (phone) */
+/* Media Query for extra small screens  */
 @media (max-width: 480px) {
     .medicine-item {
         width: 100%; /* 1 item per row for very small screens */
+    }
+
+    .order-page {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 100px;
+        height: auto;
+    }
+
+    .nav-tabs {
+        flex-direction: column;
+    }
+
+    .cart {
+        padding: 10px;
+        width: 100%;
+        margin-top: auto; /* Push cart to the bottom */
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 6px;
     }
 }
