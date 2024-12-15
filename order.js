@@ -21,7 +21,8 @@ function renderMedicines(categories) {
         <h3>${medicine.name}</h3>
         <img src="${medicine.img || 'images/placeholder.jpg'}" alt="${medicine.name}" />
         <p>Price: ${medicine.currency} ${medicine.price.toFixed(2)}</p>
-        <input type="number" min="1" placeholder="Quantity">
+        <label for="quantity-${medicine.name}">Quantity</label>
+        <input type="number" id="quantity-${medicine.name}" min="1" placeholder="Quantity">
         <button class="buttons add-to-cart">Add to Cart</button>
       `;
       // Template for each medicine item
@@ -36,7 +37,7 @@ function renderMedicines(categories) {
 
 function handleAddToCart(medicineItem, medicine) {
   const itemName = medicineItem.querySelector("h3").innerText;
-  const quantityInput = medicineItem.querySelector("input[type='number']");
+  const quantityInput = medicineItem.querySelector(`input[type='number']`);
   const quantity = parseInt(quantityInput.value);
 
   if (quantity > 0) {
