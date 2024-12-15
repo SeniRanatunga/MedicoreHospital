@@ -60,11 +60,16 @@ body {
     padding-top: 20px;
     margin: 5px auto;
     padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #007bff; /* Medium blue */
+    color: #fff; /* White text */
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+}
+
+.buttons:hover {
+    background-color: #0056b3;
 }
 
 /* Cart table styling */
@@ -99,9 +104,7 @@ tfoot td {
     font-weight: bold;
 }
 
-.buttons:hover {
-    background-color: #0056b3;
-}
+
 
 header {
     display: flex;
